@@ -40,7 +40,7 @@ def convert_to_jsonl(src_folder):
                     if file.endswith(".txt"):
                         file_path = os.path.join(folder_path, file)
                         cleaned_content = clean_text(file_path)
-                        jsonl_data.append({cleaned_content})
+                        jsonl_data.append({"text": cleaned_content})
     return jsonl_data
 
 def merge_to_jsonl(src_folder, destination_file):
